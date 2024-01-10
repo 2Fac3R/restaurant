@@ -17,6 +17,7 @@ router.register(r'restaurants', restaurant_views.RestaurantViewSet, basename='re
 urlpatterns = [
     # Routes
     path('', include(router.urls)),
+    path('statistics', restaurant_views.RestaurantStatisticsView.as_view(), name='restaurant-statistics'),
     # Auth
     path('api-auth/', include('rest_framework.urls')),
 ]
