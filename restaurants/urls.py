@@ -1,3 +1,13 @@
-from django.shortcuts import render
+"""Restaurants URLs Configuration."""
 
-# Create your views here.
+# Django
+from django.urls import path, include
+
+# Routes
+from .routes.api import urlpatterns as api
+
+
+urlpatterns = [
+    # API
+    path('', include(api)),
+]
