@@ -15,12 +15,14 @@ from ..views.api import RestaurantApiView as restaurant_views
 
 # API Routing
 router = routers.DefaultRouter()
-router.register(r'restaurants', restaurant_views.RestaurantViewSet, basename='restaurants')
+router.register(
+    r'restaurants', restaurant_views.RestaurantViewSet, basename='restaurants')
 
 urlpatterns = [
     # Routes
     path('', include(router.urls)),
-    path('statistics', restaurant_views.RestaurantStatisticsView.as_view(), name='restaurant-statistics'),
+    path('statistics', restaurant_views.RestaurantStatisticsView.as_view(),
+         name='restaurant-statistics'),
     # API Documentation
     re_path(
         'swagger(?P<format>\.json|\.yaml)$',

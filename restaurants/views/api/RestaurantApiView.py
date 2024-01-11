@@ -46,9 +46,12 @@ class RestaurantStatisticsView(APIView):
         radius = float(request.query_params.get('radius', 0))
 
         # Define the rectangular bounds
-        min_lat, max_lat = latitude - (radius / DEGREES_TO_KILOMETERS), latitude + (radius / DEGREES_TO_KILOMETERS)
-        min_lng, max_lng = longitude - (radius / DEGREES_TO_KILOMETERS), longitude + (radius / DEGREES_TO_KILOMETERS)
-
+        min_lat, max_lat = latitude - \
+            (radius / DEGREES_TO_KILOMETERS), latitude + \
+            (radius / DEGREES_TO_KILOMETERS)
+        min_lng, max_lng = longitude - \
+            (radius / DEGREES_TO_KILOMETERS), longitude + \
+            (radius / DEGREES_TO_KILOMETERS)
 
         # Filter restaurants inside the specified rectangle
         restaurants = Restaurant.objects.filter(
@@ -60,8 +63,10 @@ class RestaurantStatisticsView(APIView):
 
         # Calculate count, average rating, and standard deviation
         count = restaurants.count()
-        avg_rating = restaurants.aggregate(avg_rating=Avg('rating'))['avg_rating']
-        std_dev_rating = restaurants.aggregate(std_dev_rating=StdDev('rating'))['std_dev_rating']
+        avg_rating = restaurants.aggregate(
+            avg_rating=Avg('rating'))['avg_rating']
+        std_dev_rating = restaurants.aggregate(
+            std_dev_rating=StdDev('rating'))['std_dev_rating']
 
         # Create the response JSON
         response_data = {
