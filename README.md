@@ -1,10 +1,10 @@
-# CRM
+# Restaurants App
 
 Heroku App -> https://restaurant-edt-d4de15bcd927.herokuapp.com/restaurants/
 
 This repository is a simple Restaurant RESTful API implementation in Django with Django Rest Framework.
 
-## Installation
+## Local Installation
 
 Clone this repository
 
@@ -53,7 +53,7 @@ You can find two postman collection files (local, remote heroku app) in the root
     http://127.0.0.1:8000/restaurants/swagger/
     http://127.0.0.1:8000/restaurants/redoc/
 
-## Tests
+## Unit tests
 
 You can run all tests
 
@@ -68,6 +68,15 @@ I decided to use the following packages:
 - [django-filter](https://django-filter.readthedocs.io/en/stable/) Reusable Django app allowing users to add dynamic QuerySet filtering from URL parameters.
 
 You can find more details about others in _requirements.txt_ file.
+
+## Thoughts
+
+- **Extra**: _I added the following not requested functionalities_
+  - Unit tests
+  - Two API Documentation endpoints (swagger, redoc)
+- **TODO**: _Some ideas to keep improving the app_
+  - JSON Web Tokens (Authentication and Authorization).
+  - Searching, Filtering, Ordering API functionalities.
 
 ## Contributing
 
