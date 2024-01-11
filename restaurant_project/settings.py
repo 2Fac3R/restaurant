@@ -55,6 +55,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',  # Django Rest Framework
+    'drf_yasg',  # drf-yasg - Yet another Swagger generator
 ]
 
 LOCAL_APPS = [
