@@ -1,1 +1,1 @@
-web: gunicorn restaurant-edt.wsgi
+web: gunicorn restaurant-edt:app
