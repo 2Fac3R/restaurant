@@ -1,1 +1,1 @@
-web: gunicorn restaurant-edt:app
+web: gunicorn restaurant_project:app
