@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "0e4d41e6-10e5-4c1f-8246-3f793cf2519f",
+		"name": "Restaurants API Test REMOTE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32262994"
+	},
+	"item": [
+		{
+			"name": "GET all restaurants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restaurant-edt-d4de15bcd927.herokuapp.com/restaurants/restaurants/",
+					"protocol": "https",
+					"host": [
+						"restaurant-edt-d4de15bcd927",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"restaurants",
+						"restaurants",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET a restaurant by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restaurant-edt-d4de15bcd927.herokuapp.com/restaurants/restaurants/19e1837a-c9ad-49d8-8d6d-7cb1d2ee0700/",
+					"protocol": "https",
+					"host": [
+						"restaurant-edt-d4de15bcd927",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"restaurants",
+						"restaurants",
+						"19e1837a-c9ad-49d8-8d6d-7cb1d2ee0700",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new restaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"71795f1x-4xa0-4ex7-b925-5b906711329x\",\n    \"rating\": 4,\n    \"name\": \"EDT Restaurant\",\n    \"site\": \"https://exploration.mx/\",\n    \"email\": \"email@exploration.mx\",\n    \"phone\": \"138272475\",\n    \"street\": \"Terrazasside Urbanización\",\n    \"city\": \"Ciudad de México\",\n    \"state\": \"Estado de México\",\n    \"lat\": 19.4386824334767,\n    \"lng\": -99.1289113955692\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restaurant-edt-d4de15bcd927.herokuapp.com/restaurants/restaurants/",
+					"protocol": "https",
+					"host": [
+						"restaurant-edt-d4de15bcd927",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"restaurants",
+						"restaurants",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a restaurant",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"71795f1x-4xa0-4ex7-b925-5b906711329x\",\n    \"rating\": 4,\n    \"name\": \"EDT Excelent Restaurant\",\n    \"site\": \"https://exploration.mx/\",\n    \"email\": \"soporte@exploration.mx\",\n    \"phone\": \"138272475\",\n    \"street\": \"Terrazasside Urbanización\",\n    \"city\": \"Ciudad de México\",\n    \"state\": \"Estado de México\",\n    \"lat\": 19.4386824334767,\n    \"lng\": -99.1289113955692\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restaurant-edt-d4de15bcd927.herokuapp.com/restaurants/restaurants/71795f1x-4xa0-4ex7-b925-5b906711329x/",
+					"protocol": "https",
+					"host": [
+						"restaurant-edt-d4de15bcd927",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"restaurants",
+						"restaurants",
+						"71795f1x-4xa0-4ex7-b925-5b906711329x",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update restaurant name and rating",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rating\": 3,\n    \"name\": \"EDT Good Restaurant\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restaurant-edt-d4de15bcd927.herokuapp.com/restaurants/restaurants/71795f1x-4xa0-4ex7-b925-5b906711329x/",
+					"protocol": "https",
+					"host": [
+						"restaurant-edt-d4de15bcd927",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"restaurants",
+						"restaurants",
+						"71795f1x-4xa0-4ex7-b925-5b906711329x",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a restaurant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rating\": 3,\n    \"name\": \"EDT Good Restaurant\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restaurant-edt-d4de15bcd927.herokuapp.com/restaurants/restaurants/71795f1x-4xa0-4ex7-b925-5b906711329x/",
+					"protocol": "https",
+					"host": [
+						"restaurant-edt-d4de15bcd927",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"restaurants",
+						"restaurants",
+						"71795f1x-4xa0-4ex7-b925-5b906711329x",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurant Statistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restaurant-edt-d4de15bcd927.herokuapp.com/restaurants/statistics?latitude=19&longitude=-99&radius=50",
+					"protocol": "https",
+					"host": [
+						"restaurant-edt-d4de15bcd927",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"restaurants",
+						"statistics"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "19"
+						},
+						{
+							"key": "longitude",
+							"value": "-99"
+						},
+						{
+							"key": "radius",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

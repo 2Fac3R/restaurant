@@ -1,5 +1,7 @@
 # CRM
 
+Heroku App -> https://restaurant-edt-d4de15bcd927.herokuapp.com/restaurants/
+
 This repository is a simple Restaurant RESTful API implementation in Django with Django Rest Framework.
 
 ## Installation
@@ -44,7 +46,7 @@ Restaurant Instance (view, edit, delete)
 
 ## API Testing
 
-You can find a postman collection file "Restaurants API Test.postman_collection.json" in the root directory.
+You can find two postman collection files (local, remote heroku app) in the root directory.
 
 ## API Documentation
 
@@ -66,11 +68,6 @@ I decided to use the following packages:
 - [django-filter](https://django-filter.readthedocs.io/en/stable/) Reusable Django app allowing users to add dynamic QuerySet filtering from URL parameters.
 
 You can find more details about others in _requirements.txt_ file.
-
-## TODO:
-
-- Deploy to heroku
-- Update url for api tests (postman collection)
 
 ## Contributing
 
