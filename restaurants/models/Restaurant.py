@@ -4,7 +4,7 @@
 from django.urls import reverse
 
 # GeoDjango
-from django.contrib.gis.db import models
+from django.db import models
 
 
 class Restaurant(models.Model):
